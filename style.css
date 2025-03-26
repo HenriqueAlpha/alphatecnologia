@@ -1,0 +1,16 @@
+body{
+height: 100vh;
+background-image: url('fundo.webp');
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.logo{
+ width: 500px;
+}
+
+
+.container{
+    text-align: center;
+}
