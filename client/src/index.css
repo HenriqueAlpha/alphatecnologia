@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* WhatsApp Colors */
+  --whatsapp-50: hsl(130, 100%, 97%);
+  --whatsapp-100: hsl(130, 89%, 94%);
+  --whatsapp-200: hsl(130, 75%, 86%);
+  --whatsapp-300: hsl(130, 65%, 75%);
+  --whatsapp-400: hsl(130, 55%, 65%);
+  --whatsapp-500: hsl(138, 69%, 49%);
+  --whatsapp-600: hsl(138, 69%, 39%);
+  --whatsapp-700: hsl(138, 69%, 29%);
+  --whatsapp-800: hsl(138, 69%, 19%);
+  --whatsapp-900: hsl(138, 69%, 9%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .whatsapp-50 {
+    background-color: var(--whatsapp-50);
+  }
+  .whatsapp-100 {
+    background-color: var(--whatsapp-100);
+  }
+  .whatsapp-500 {
+    background-color: var(--whatsapp-500);
+  }
+  .whatsapp-600 {
+    background-color: var(--whatsapp-600);
+  }
+  .text-whatsapp-500 {
+    color: var(--whatsapp-500);
+  }
+  .text-whatsapp-600 {
+    color: var(--whatsapp-600);
+  }
+  .border-whatsapp-100 {
+    border-color: var(--whatsapp-100);
+  }
+  .bg-whatsapp-50 {
+    background-color: var(--whatsapp-50);
+  }
+  .bg-whatsapp-100 {
+    background-color: var(--whatsapp-100);
+  }
+  .bg-whatsapp-500 {
+    background-color: var(--whatsapp-500);
+  }
+  .bg-whatsapp-600 {
+    background-color: var(--whatsapp-600);
+  }
+  .hover\:bg-whatsapp-600:hover {
+    background-color: var(--whatsapp-600);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
